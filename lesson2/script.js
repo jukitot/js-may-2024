@@ -201,7 +201,7 @@ if (day >= 1 && day <= 10) {
     console.log('3-rd')
 }
 // - Скласти розклад на тиждень за домопоги switch. Користувач вводить порядковий номер дня тижня і на екрані відображається інфа що заплановано на цей день (можна замість плану на день, назву дня англійською).
-let d_day = prompt("enter your day");
+let d_day = prompt('enter your day');
 switch (+d_day) {
     case 1:
         alert('Monday');
@@ -231,8 +231,8 @@ switch (+d_day) {
 // Потрібно знайти та вивести максимальне число з тих двох .
 // Також потрібно врахувати коли введені рівні числа.
 
-let num1 = prompt("enter number 1");
-let num2 = prompt("enter number 2");
+let num1 = prompt('enter number 1');
+let num2 = prompt('enter number 2');
 num1 = parseInt(num1);
 num2 = parseInt(num2);
 if (num1 > num2) {
@@ -240,9 +240,9 @@ if (num1 > num2) {
 } else if (num1 < num2) {
     alert(num2)
 } else if (num1 === num2) {
-    alert("num1 = num2")
+    alert('num1 = num2')
 } else {
-    alert("incorrect values")
+    alert('incorrect values')
 }
 
 // - є змінна х, яка може прийняти будь-яке значення (стрінг, число, undefined, null  і тд включно). Напишіть код який,
