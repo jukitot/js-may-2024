@@ -191,7 +191,7 @@ let arr7 = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 
 for (let i = 0; i < arr7.length ; i++) {
     console.log(arr7[i])
 }
-document.write('<hr>')
+
 // - Створити масив з 10 елементів будь-якого типу. Вивести в консоль всі його елементи в циклі.
 
 let arr8 = [12, 'Tomato', true, 9284, 'Potato', false, 123, 'Carrot', true, 111111]
@@ -202,19 +202,82 @@ for (let i = 0; i < arr8.length ; i++) {
 // - Створити масив з 10 елементів числового, стірчкового і булевого типу. За допомогою if та typeof вивести тільки булеві елементи
 
 let arr9 = [true, 'Tomato', true, 4, 'Potato', false, 8923, 'Carrot', true, 111111]
-for
+for(let i = 0; i < arr9.length; i++) {
+    if (typeof arr9[i] === "boolean") {
+        console.log(arr9[i]);
+    }
+}
 
 // - Створити масив з 10 елементів числового, стірчкового і булевого типу. За допомогою if та typeof вивести тільки числові елементи
+
+for(let i = 0; i < arr9.length; i++) {
+    if (typeof arr9[i] === "number") {
+        console.log(arr9[i]);
+    }
+}
 // - Створити масив з 10 елементів числового, стрічкового і булевого типу. За допомогою if та typeof вивести тільки рядкові елементи
-//
+
+for(let i = 0; i < arr9.length; i++) {
+    if (typeof arr9[i] === "string") {
+        console.log(arr9[i]);
+    }
+}
 // - Створити порожній масив. Наповнити його 10 елементами (різними за типами) через звернення до конкретних індексів. Вивести в консоль всі його елементи в циклі.
+
+let arr10 = []
+arr10[0] = 120;
+arr10[1] = true;
+arr10[2] = 'today';
+arr10[3] = false;
+arr10[4] = 'tomorrow';
+arr10[5] = 110;
+arr10[6] = 'yesterday';
+arr10[7] = 1992;
+arr10[8] = true;
+arr10[9] = 'weekend'
+
+for (let i = 0; i < arr10.length ; i++) {
+    console.log(arr10[i]);
+}
 // - Створити цикл for на 10  ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
+
+for (let i = 0; i < 10; i++) {
+    console.log(i);
+    document.write(`${i} `)
+}
+document.write('<hr>')
 // - Створити цикл for на 100 ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
+
+for (let i = 0; i < 100; i++) {
+    console.log(i);
+    document.write(`${i} `)
+}
 // - Створити цикл for на 100 ітерацій з кроком 2. Вивести поточний номер кроку через console.log та document.write
+document.write('<hr>')
+for (let i = 0; i < 100; i += 2) {
+    console.log(i);
+    document.write(`${i} `)
+}
+
+document.write('<hr>')
 // - Створити цикл for на 100 ітерацій. Вивести тільки парні кроки. через console.log + document.write
+
+for (let i = 0; i < 100; i++) {
+    if (i % 2 === 0) {
+        console.log(i);
+        document.write(`${i} `)
+    }
+}
+
+document.write('<hr>')
 // - Створити цикл for на 100 ітерацій. Вивести тільки непарні кроки. через console.log + document.write
-//
-//
+
+for (let i = 0; i < 100; i++) {
+    if (i % 2 !== 0) {
+        console.log(i);
+        document.write(`${i} `)
+    }
+}
 //
 // стоврити масив книжок (назва, кількість сторінок, автори , жанри).
 // -знайти наібльшу книжку.
