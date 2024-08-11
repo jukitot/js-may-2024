@@ -71,7 +71,7 @@ for (let i = 0; i < arrPrice.length; i++) {
     result += arrPrice[i];
     console.log(result);
 }
-result = result / arrPrice.length - 1
+result = result / arrPrice.length
 console.log(result);
 //  7. Створити масив з рандомними значеннями, помножити всі його елементи на 5 та перемістити їх в інший масив.
 
