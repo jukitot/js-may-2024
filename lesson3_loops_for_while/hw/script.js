@@ -120,7 +120,7 @@ let users = [
 for (const user of users) {
     if (user.status === true) {
         document.write(`<h2>Name: ${user.name}</h2>`)
-        document.write(`<h3>Age: ${user.age}</h3>`)
+        document.write(`<h3>Age: ${user.age}</h3>`) 
         document.write(`<h4>Status: ${user.status}</h4>`)
 
     }
