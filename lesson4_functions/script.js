@@ -140,8 +140,7 @@ console.log(sum([10, 20, 4, 110, 2]));
 
 function swap(arr, index1, index2) {
     let num1 = arr[index1];
-    let num2 = arr[index2];
-    arr[index1] = num2;
+    arr[index1] = arr[index2];
     arr[index2] = num1;
     return arr
 }
