@@ -8,7 +8,7 @@ console.log(areaRectangle(10, 30));
 // - створити функцію яка обчислює та повертає площу кола з радіусом r
 
 const PI = 3.14;
-let areaCircle = (r) => PI * r ** 2
+let areaCircle = r => PI * r ** 2
 console.log(areaCircle(13));
 
 // - створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r
@@ -19,7 +19,7 @@ console.log(areaCylinder(10, 5));
 
 // - створити функцію яка приймає масив та виводить кожен його елемент
 
-let loopArray = (array) => {
+let loopArray = array => {
     for (const item of array) {
         console.log(item)
     }
@@ -29,7 +29,7 @@ loopArray(nums);
 
 // - створити функцію яка створює параграф з текстом. Текст задати через аргумент
 
-let paragraph = (text) => document.write(`<p>${text}</p>`)
+let paragraph = text => document.write(`<p>${text}</p>`)
 let text1 = 'Hello World!!!';
 let text2 = 'Today is a good day';
 paragraph(text1);
@@ -37,7 +37,7 @@ paragraph(text2);
 
 // - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий
 
-let list1 = (text) => document.write(`<ul>
+let list1 = text => document.write(`<ul>
 <li>${text}</li>
 <li>${text}</li>
 <li>${text}</li>
@@ -61,7 +61,7 @@ list2(text1, 10)
 
 // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
 
-let arrayList = (array) => {
+let arrayList = array => {
     document.write('<ul>')
     for (let i = 0; i < array.length; i++) {
         document.write(`<li>${array[i]}</li>`)
@@ -74,7 +74,7 @@ arrayList(arrayText);
 
 // - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.
 
-let objList = (array) => {
+let objList = array => {
     for (const item of array) {
         document.write(`<div>
         <h1>ID: ${item.id}</h1>
@@ -99,7 +99,7 @@ objList(users);
 
 // - створити функцію яка повертає найменьше число з масиву
 
-let minNum = (array) => {
+let minNum = array => {
     let min = array[0]
     for (const num of array) {
         if (num < min) {
@@ -113,7 +113,7 @@ console.log(minNum([2, 20, 4, 110, 1]));
 
 // - створити функцію sum(arr)яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад sum([1,2,10]) //->13
 
-let sum = (arr) => {
+let sum = arr => {
     let result = 0;
     for (const num of arr) {
         result += num;
