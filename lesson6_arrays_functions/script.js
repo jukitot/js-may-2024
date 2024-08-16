@@ -212,15 +212,39 @@ console.log(clubsCards);
 //     clubs:[]
 // }
 
+// let reduceCard = cards.reduce((accum, card) => {
+//     if (card.cardSuit === 'spade') {
+//         accum.spades.push(card)
+//     } else if (card.cardSuit === 'diamond') {
+//         accum.diamonds.push(card)
+//     } else if (card.cardSuit === 'heart') {
+//         accum.hearts.push(card)
+//     } else {
+//         accum.clubs.push(card)
+//     }
+//     return accum
+// }, {
+//     spades: [],
+//     diamonds: [],
+//     hearts: [],
+//     clubs: []
+// });
+
+
 let reduceCard = cards.reduce((accum, card) => {
-    if (card.cardSuit === 'spade') {
-        accum.spades.push(card)
-    } else if (card.cardSuit === 'diamond') {
-        accum.diamonds.push(card)
-    } else if (card.cardSuit === 'heart') {
-        accum.hearts.push(card)
-    } else {
-        accum.clubs.push(card)
+    switch (card.cardSuit) {
+        case 'spade':
+            accum.spades.push(card);
+            break;
+        case 'diamond':
+            accum.diamonds.push(card);
+            break;
+        case 'heart':
+            accum.hearts.push(card);
+            break;
+        case 'clubs':
+            accum.clubs.push(card);
+            break;
     }
     return accum
 }, {
@@ -229,7 +253,6 @@ let reduceCard = cards.reduce((accum, card) => {
     hearts: [],
     clubs: []
 });
-
 console.log(reduceCard);
 
 
