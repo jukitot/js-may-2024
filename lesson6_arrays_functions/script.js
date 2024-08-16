@@ -33,7 +33,8 @@ console.log(str6.toLowerCase());
 
 // - Є "брудна" стрінга let str = ' dirty string   ' . Почистити її від зайвих пробілів.
 //
-
+let dirtyString = ' dirty string   '
+console.log(dirtyString.trim());
 
 // - Напишіть функцію stringToarray(str), яка перетворює рядок на масив слів.
 //     let str = 'Ревуть воли як ясла повні';
@@ -52,15 +53,10 @@ let mapped = nums.map(value => `${value}`);
 console.log(mapped);
 
 // - створити функцію sortNums(array,direction), яка прймає масив чисел, та сортує його від більшого до меньшого, або навпаки в залежності від значення аргументу direction.
-// let nums = [11,21,3];
+let nums1 = [11, 21, 3];
 // sortNums(nums,'ascending') // [3,11,21]
 // sortNums(nums,'descending') // [21,11,3]
 
-// let sort = nums.sort((num1, num2)=> {
-//     return num2 - num1
-// })
-// //
-// // console.log(sort);
 
 let sortNums = (array, direction) => {
     let sort;
@@ -74,11 +70,11 @@ let sortNums = (array, direction) => {
         })
 
     }
-return sort;
+    return sort;
 }
 
-console.log(sortNums(nums, 'ascending'));
-console.log(sortNums(nums, 'descending'));
+console.log(sortNums(nums1, 'ascending'));
+console.log(sortNums(nums1, 'descending'));
 // ==========================
 
 // - є масив
@@ -120,8 +116,6 @@ console.log(mappedCourse);
 //  описати колоду карт (від 6 до туза без джокерів)
 
 
-
-
 //  - всі трефи від 9 та більше
 //
 // {
@@ -132,48 +126,48 @@ console.log(mappedCourse);
 //
 
 let cards = [
-    { cardSuit: 'spade', value: '6', color: 'black' },
-    { cardSuit: 'spade', value: '7', color: 'black' },
-    { cardSuit: 'spade', value: '8', color: 'black' },
-    { cardSuit: 'spade', value: '9', color: 'black' },
-    { cardSuit: 'spade', value: '10', color: 'black' },
-    { cardSuit: 'spade', value: 'jack', color: 'black' },
-    { cardSuit: 'spade', value: 'queen', color: 'black' },
-    { cardSuit: 'spade', value: 'king', color: 'black' },
-    { cardSuit: 'spade', value: 'ace', color: 'black' },
-    { cardSuit: 'diamond', value: '6', color: 'red' },
-    { cardSuit: 'diamond', value: '7', color: 'red' },
-    { cardSuit: 'diamond', value: '8', color: 'red' },
-    { cardSuit: 'diamond', value: '9', color: 'red' },
-    { cardSuit: 'diamond', value: '10', color: 'red' },
-    { cardSuit: 'diamond', value: 'jack', color: 'red' },
-    { cardSuit: 'diamond', value: 'queen', color: 'red' },
-    { cardSuit: 'diamond', value: 'king', color: 'red' },
-    { cardSuit: 'diamond', value: 'ace', color: 'red' },
-    { cardSuit: 'heart', value: '6', color: 'red' },
-    { cardSuit: 'heart', value: '7', color: 'red' },
-    { cardSuit: 'heart', value: '8', color: 'red' },
-    { cardSuit: 'heart', value: '9', color: 'red' },
-    { cardSuit: 'heart', value: '10', color: 'red' },
-    { cardSuit: 'heart', value: 'jack', color: 'red' },
-    { cardSuit: 'heart', value: 'queen', color: 'red' },
-    { cardSuit: 'heart', value: 'king', color: 'red' },
-    { cardSuit: 'heart', value: 'ace', color: 'red' },
-    { cardSuit: 'clubs', value: '6', color: 'black' },
-    { cardSuit: 'clubs', value: '7', color: 'black' },
-    { cardSuit: 'clubs', value: '8', color: 'black' },
-    { cardSuit: 'clubs', value: '9', color: 'black' },
-    { cardSuit: 'clubs', value: '10', color: 'black' },
-    { cardSuit: 'clubs', value: 'jack', color: 'black' },
-    { cardSuit: 'clubs', value: 'queen', color: 'black' },
-    { cardSuit: 'clubs', value: 'king', color: 'black' },
-    { cardSuit: 'clubs', value: 'ace', color: 'black' }
+    {cardSuit: 'spade', value: '6', color: 'black'},
+    {cardSuit: 'spade', value: '7', color: 'black'},
+    {cardSuit: 'spade', value: '8', color: 'black'},
+    {cardSuit: 'spade', value: '9', color: 'black'},
+    {cardSuit: 'spade', value: '10', color: 'black'},
+    {cardSuit: 'spade', value: 'jack', color: 'black'},
+    {cardSuit: 'spade', value: 'queen', color: 'black'},
+    {cardSuit: 'spade', value: 'king', color: 'black'},
+    {cardSuit: 'spade', value: 'ace', color: 'black'},
+    {cardSuit: 'diamond', value: '6', color: 'red'},
+    {cardSuit: 'diamond', value: '7', color: 'red'},
+    {cardSuit: 'diamond', value: '8', color: 'red'},
+    {cardSuit: 'diamond', value: '9', color: 'red'},
+    {cardSuit: 'diamond', value: '10', color: 'red'},
+    {cardSuit: 'diamond', value: 'jack', color: 'red'},
+    {cardSuit: 'diamond', value: 'queen', color: 'red'},
+    {cardSuit: 'diamond', value: 'king', color: 'red'},
+    {cardSuit: 'diamond', value: 'ace', color: 'red'},
+    {cardSuit: 'heart', value: '6', color: 'red'},
+    {cardSuit: 'heart', value: '7', color: 'red'},
+    {cardSuit: 'heart', value: '8', color: 'red'},
+    {cardSuit: 'heart', value: '9', color: 'red'},
+    {cardSuit: 'heart', value: '10', color: 'red'},
+    {cardSuit: 'heart', value: 'jack', color: 'red'},
+    {cardSuit: 'heart', value: 'queen', color: 'red'},
+    {cardSuit: 'heart', value: 'king', color: 'red'},
+    {cardSuit: 'heart', value: 'ace', color: 'red'},
+    {cardSuit: 'clubs', value: '6', color: 'black'},
+    {cardSuit: 'clubs', value: '7', color: 'black'},
+    {cardSuit: 'clubs', value: '8', color: 'black'},
+    {cardSuit: 'clubs', value: '9', color: 'black'},
+    {cardSuit: 'clubs', value: '10', color: 'black'},
+    {cardSuit: 'clubs', value: 'jack', color: 'black'},
+    {cardSuit: 'clubs', value: 'queen', color: 'black'},
+    {cardSuit: 'clubs', value: 'king', color: 'black'},
+    {cardSuit: 'clubs', value: 'ace', color: 'black'}
 ];
 
 //  - знайти піковий туз
 
 let spadeAce = cards.find(value => {
-   return  value.cardSuit === 'spade' && value.value === 'ace';
+    return value.cardSuit === 'spade' && value.value === 'ace';
 })
 
 console.log(spadeAce);
@@ -210,8 +204,6 @@ let clubsCards = cards.filter(value => {
 
 console.log(clubsCards);
 // =========================
-//
-// #EP5I1UUzAX
 // Взяти описану колоду карт, та за допомоги reduce упакувати всі карти по "мастях" в об'єкт
 // {
 //     spades:[],
@@ -219,8 +211,107 @@ console.log(clubsCards);
 //     hearts:[],
 //     clubs:[]
 // }
+
+let reduceCard = cards.reduce((accum, card) => {
+    if (card.cardSuit === 'spade') {
+        accum.spades.push(card)
+    } else if (card.cardSuit === 'diamond') {
+        accum.diamonds.push(card)
+    } else if (card.cardSuit === 'heart') {
+        accum.hearts.push(card)
+    } else {
+        accum.clubs.push(card)
+    }
+    return accum
+}, {
+    spades: [],
+    diamonds: [],
+    hearts: [],
+    clubs: []
+});
+
+console.log(reduceCard);
+
+
 // =========================
-// #4LJn7zBx
+
 // взяти з arrays.js масив coursesArray
+
+let coursesArray = [
+    {
+        title: 'JavaScript Complex',
+        monthDuration: 5,
+        hourDuration: 909,
+        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js']
+    },
+    {
+        title: 'Java Complex',
+        monthDuration: 6,
+        hourDuration: 909,
+        modules: ['html',
+            'css',
+            'js',
+            'mysql',
+            'mongodb',
+            'angular',
+            'aws',
+            'docker',
+            'git',
+            'java core',
+            'java advanced']
+    },
+    {
+        title: 'Python Complex',
+        monthDuration: 6,
+        hourDuration: 909,
+        modules: ['html',
+            'css',
+            'js',
+            'mysql',
+            'mongodb',
+            'angular',
+            'aws',
+            'docker',
+            'python core',
+            'python advanced']
+    },
+    {
+        title: 'QA Complex',
+        monthDuration: 4,
+        hourDuration: 909,
+        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'git', 'QA/QC']
+    },
+    {
+        title: 'FullStack',
+        monthDuration: 7,
+        hourDuration: 909,
+        modules: ['html',
+            'css',
+            'js',
+            'mysql',
+            'mongodb',
+            'react',
+            'angular',
+            'aws',
+            'docker',
+            'git',
+            'node.js',
+            'python',
+            'java']
+    },
+    {
+        title: 'Frontend',
+        monthDuration: 4,
+        hourDuration: 909,
+        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
+    }
+];
 // --написати пошук всіх об'єктів, в яких в modules є sass
+
+let courseFilterSass = coursesArray.filter(value => value.modules.find(module => module === 'sass'));
+console.log(courseFilterSass);
+
 // --написати пошук всіх об'єктів, в яких в modules є docker
+
+let courseFilterDocker = coursesArray.filter(value => value.modules.find(module => module === 'docker'));
+console.log(courseFilterDocker);
