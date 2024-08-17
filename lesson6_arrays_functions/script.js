@@ -58,17 +58,34 @@ let nums1 = [11, 21, 3];
 // sortNums(nums,'descending') // [21,11,3]
 
 
+// let sortNums = (array, direction) => {
+//     let sort;
+//     if (direction === 'ascending') {
+//         sort = array.sort((num1, num2) => {
+//             return num1 - num2
+//         })
+//     } else if (direction === 'descending') {
+//         sort = array.sort((num1, num2) => {
+//             return num2 - num1
+//         })
+//
+//     }
+//     return sort;
+// }
+
 let sortNums = (array, direction) => {
     let sort;
-    if (direction === 'ascending') {
-        sort = array.sort((num1, num2) => {
-            return num1 - num2
-        })
-    } else if (direction === 'descending') {
-        sort = array.sort((num1, num2) => {
-            return num2 - num1
-        })
-
+    switch (direction) {
+        case 'ascending':
+            sort = array.sort((num1, num2) => {
+                return num1 - num2
+            })
+            break;
+        case 'descending':
+            sort = array.sort((num1, num2) => {
+                return num2 - num1
+            })
+            break;
     }
     return sort;
 }
@@ -114,10 +131,6 @@ console.log(mappedCourse);
 //  =========================
 //  #bolvdlhP
 //  описати колоду карт (від 6 до туза без джокерів)
-
-
-//  - всі трефи від 9 та більше
-//
 // {
 //     cardSuit: '', // 'spade', 'diamond','heart', 'clubs'
 //     value: '', // '6'-'10', 'ace','jack','queen','king'
@@ -329,6 +342,7 @@ let coursesArray = [
         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
     }
 ];
+
 // --написати пошук всіх об'єктів, в яких в modules є sass
 
 let courseFilterSass = coursesArray.filter(value => value.modules.find(module => module === 'sass'));
