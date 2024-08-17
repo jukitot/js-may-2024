@@ -212,10 +212,12 @@ console.log(diamondCards);
 //  - всі трефи від 9 та більше
 
 let clubsCards = cards.filter(value => {
-    return value.cardSuit === 'clubs' && value.value >= 9;
+    return value.cardSuit === 'clubs' && (value.value !== '6' && value.value !== '7' && value.value !== '8');
 })
 
 console.log(clubsCards);
+
+
 // =========================
 // Взяти описану колоду карт, та за допомоги reduce упакувати всі карти по "мастях" в об'єкт
 // {
