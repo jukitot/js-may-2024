@@ -169,7 +169,7 @@ let car2 = new Car2('Model 5', 'Tesla', 2016, 170, 50);
 console.log(car2);
 car2.drive();
 car2.info();
-car2.addDriver({name: 'Oleg', surname: 'Petrenko', age: 25} )
+car2.addDriver({name: 'Oleg', surname: 'Petrenko', age: 25})
 car2.changeYear(2014)
 car2.increaseMaxSpeed(180)
 console.log(car2);
@@ -209,7 +209,7 @@ class Prince {
         this.foundSize = foundSize;
     }
 
-    searchCinderella (cinderellaArray){
+    searchCinderella(cinderellaArray) {
         for (const cinderella of cinderellaArray) {
             if (cinderella.footSize === this.foundSize) {
                 return cinderella
@@ -217,12 +217,13 @@ class Prince {
         }
     }
 }
+
 let prince = new Prince('Adam', 21, 40)
 console.log(prince.searchCinderella(cinderellaArray));
 
 
 let found2 = cinderellaArray.find(cinderella => {
-   return cinderella.footSize === prince.foundSize;
+    return cinderella.footSize === prince.foundSize;
 })
 console.log(found2);
 //
