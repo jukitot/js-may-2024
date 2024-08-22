@@ -5,22 +5,44 @@
 
 
 function deepCopy(object) {
-    if ({object}) {
-        return {...object}
-    } else {
-        console.log('invalid');
+    if (object === null || typeof object !== 'object') {
+        return object;
     }
-}
 
-let newCopy = deepCopy({
+    if (Array.isArray(object)) {
+        return object.map(deepCopy);
+    }
+
+    const copy = { ...object };
+    for (let key in copy) {
+        copy[key] = deepCopy(copy[key]);
+    }
+
+    return copy;
+}
+let user = {
     id: 1, name: 'Alex', age: 23, foobar() {
         console.log(`hello, i'm ${this.name}`);
     },
     skills: ['html', 'js', 'css']
-});
+}
+user.age = 25
+user.skills.push('react')
+console.log(user);
+
+
+let newCopy = deepCopy(user);
+newCopy.age = 21;
+newCopy.skills.push('angular')
 console.log(newCopy);
 newCopy.foobar()
-//
+console.log(user.skills);
+console.log(newCopy.skills);
+
+console.log(deepCopy(null));
+console.log(deepCopy(NaN));
+console.log(deepCopy(undefined));
+
 // #iz6emEsP2BA
 // - є масив
 
