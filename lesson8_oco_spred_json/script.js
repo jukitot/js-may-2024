@@ -13,9 +13,15 @@ function deepCopy(object) {
         return object.map(deepCopy);
     }
 
-    const copy = { ...object };
-    for (let key in copy) {
-        copy[key] = deepCopy(copy[key]);
+    // const copy = { ...object };
+    // for (let key in copy) {
+    //     copy[key] = deepCopy(copy[key]);
+    // }
+
+    const copy = Object.create(Object.getPrototypeOf(object));
+    for (let key of Object.keys(object)) {
+        const value = object[key];
+        copy[key] = typeof value === 'function' ? value.bind(copy) : deepCopy(value);
     }
 
     return copy;
