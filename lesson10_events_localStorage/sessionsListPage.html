@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="blockTime">
+
+</div>
+<script>
+    let block = document.getElementById('blockTime');
+
+    let array = JSON.parse(localStorage.getItem('sessionList'));
+    for (const item of array) {
+        let h4 = document.createElement('h4')
+        h4.innerText = item;
+        block.append(h4)
+    }
+
+</script>
+</body>
+</html>
