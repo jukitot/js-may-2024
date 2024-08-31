@@ -1,0 +1,55 @@
+header {
+    width: 100%;
+    background-color: lightblue;
+    height: 70px;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+main {
+
+    margin-top: 90px;
+}
+
+.blockIngredients {
+    width: 40%;
+}
+
+img {
+    height: 50%;
+    width: 90%;
+    margin: auto;
+    border-radius: 15px;
+
+}
+
+.blockRecipe {
+    height: 50%;
+    width: 30%;
+    text-align: center;
+
+}
+
+.blockRecipe img {
+
+}
+
+.ingredientsList li:nth-child(2n) {
+    background-color: rgba(128, 229, 240, 0.42);
+}
+
+.ingredientsList li {
+    width: 50%;
+}
+
+.ingredientsList {
+    margin-bottom: 50px;
+
+}
+
+.blockIngredients {
+    font-size: 20px;
+    margin-left: 50px;
+}
