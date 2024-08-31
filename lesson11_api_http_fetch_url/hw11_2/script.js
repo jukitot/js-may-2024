@@ -2,7 +2,7 @@
 // - взяти https://dummyjson.com/docs/recipes та вивести інформацію про всі рецепти. Інгредієнти повинні бути список під час відображення.
 
 function create(tag){
-    return document.createElement(`${tag}`)
+    return document.createElement(tag)
 }
 
 fetch('https://dummyjson.com/recipes?limit=50')
